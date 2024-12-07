@@ -1,0 +1,50 @@
+---
+import Main from "../layouts/main.layout.astro";
+import Socials from "../components/socials.component.astro";
+---
+
+<Main title="GRJorge portfolio">
+  <header class="flex flex-col justify-center items-center h-screen">
+    <div class="flex flex-col lg:flex-row w-3/4 sm:w-1/2 gap-4">
+      <div
+        class="flex flex-1 flex-col justify-center items-center gap-2 bg-dark-300 text-light rounded-lg shadow-lg p-4 hover:scale-105 transition-all"
+      >
+        <h2 class="font-semibold text-lg">Web Developer</h2>
+        <ul class="flex gap-4 text-blue">
+          <li><i class="fi fi-rr-globe"></i></li>
+          <li><i class="fi fi-rr-bug"></i></li>
+          <li><i class="fi fi-rr-rectangle-code"></i></li>
+          <li><i class="fi fi-rr-keyboard"></i></li>
+          <li><i class="fi fi-rr-cloud"></i></li>
+          <li><i class="fi fi-rr-code-pull-request"></i></li>
+        </ul>
+      </div>
+      <div
+        class="flex flex-1 flex-col justify-center items-center gap-2 bg-dark-300 text-light rounded-lg shadow-lg p-4 hover:scale-105 transition-all"
+      >
+        <h2 class="font-semibold text-lg">Designer</h2>
+        <ul class="flex gap-4 text-purple">
+          <li><i class="fi fi-rr-pen-clip"></i></li>
+          <li><i class="fi fi-rr-lightbulb-on"></i></li>
+          <li><i class="fi fi-rr-cat-head"></i></li>
+          <li><i class="fi fi-rr-cursor"></i></li>
+          <li><i class="fi fi-rr-eye-dropper"></i></li>
+          <li><i class="fi fi-rr-palette"></i></li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex flex-col text-center items-center text-light mt-16">
+      <h1 class="font-bold text-3xl cursor-default px-8"><span class="hover:text-orange transition-colors">Jorge</span> <span class="hover:text-orange transition-colors">García</span> <span class="hover:text-orange transition-colors">Rodríguez</span></h1>
+      <p class="text-sm mt-3 mb-6">
+        Turning <span class="text-primary font-semibold">ideas</span> into real life.
+      </p>
+      <Socials />
+    </div>
+  </header>
+</Main>
+
+<style>
+  ul > li:hover {
+    @apply transition-all scale-[116%];
+  }
+</style>
