@@ -15,7 +15,10 @@ export default {
       green: "#B8BB26",
       orange: "#FE8019",
       red: "#FB4934",
-      blue: "#83A598"
+      blue: "#83A598",
+    },
+    fontFamily: {
+      ibm: ["IBM Plex Mono", "monospace"],
     },
     extend: {},
   },
