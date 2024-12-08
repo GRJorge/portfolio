@@ -1,9 +1,13 @@
+---
+import Logo from "./logo.component.astro";
+---
+
 <nav class="fixed justify-center text-sm w-screen flex bottom-4 z-50">
   <div class="flex items-center w-1/2 rounded-full bg-dark-300 shadow-lg p-2 text-light">
     <a class="flex-1 text-center rounded-full py-1 hover:bg-dark-200 transition-all" href="">About me</a>
     <a class="flex-1 text-center rounded-full py-1 hover:bg-dark-200 transition-all" href="">Skills</a>
     <div class="relative flex justify-center items-center w-14 mx-2">
-      <a class="bg-orange rounded-full absolute w-14 h-14 flex justify-center items-center shadow-lg group" href=""><img class="w-12 group-hover:scale-[114%] transition-all" src="/favicon.svg" alt=""></a>
+      <a class="bg-orange hover:bg-primary rounded-lg absolute w-14 h-14 flex justify-center items-center shadow-lg group" href=""><Logo color="fill-light" size={32} /></a>
     </div>
     <a class="flex-1 text-center rounded-full py-1 hover:bg-dark-200 transition-all" href="">Projects</a>
     <a class="flex-1 text-center rounded-full py-1 hover:bg-dark-200 transition-all" href="">Contact me</a>
