@@ -2,12 +2,12 @@
 import Logo from "./logo.component.astro";
 ---
 
-<nav class="fixed justify-center text-sm w-screen flex bottom-4 z-50">
-  <div class="flex items-center w-1/2 rounded-lg bg-dark-300 shadow-lg p-2 text-light">
+<nav class="fixed justify-center text-xs md:text-sm text-nowrap w-screen flex bottom-4 z-50">
+  <div class="flex items-center w-3/4 sm:w-1/2 rounded-lg bg-dark-500 shadow-lg p-1 sm:p-2 text-light">
     <a class="flex-1 text-center rounded-full py-1 hover:bg-dark-200 transition-all" href="">About me</a>
     <a class="flex-1 text-center rounded-full py-1 hover:bg-dark-200 transition-all" href="">Skills</a>
-    <div class="relative flex justify-center items-center w-14 mx-2">
-      <a class="bg-orange hover:bg-primary rounded-lg absolute w-14 h-14 flex justify-center items-center shadow-lg group" href=""><Logo color="fill-light" size={32} /></a>
+    <div class="relative flex w-6 sm:w-14 justify-center items-center mx-2">
+      <a class="bg-orange hover:bg-primary rounded-lg absolute scale-[70%] sm:scale-100 w-14 h-14 flex justify-center items-center shadow-lg group" href=""><Logo color="fill-light" size={32} /></a>
     </div>
     <a class="flex-1 text-center rounded-full py-1 hover:bg-dark-200 transition-all" href="">Projects</a>
     <a class="flex-1 text-center rounded-full py-1 hover:bg-dark-200 transition-all" href="">Contact me</a>
