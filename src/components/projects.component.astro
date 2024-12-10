@@ -18,19 +18,19 @@ const logos = await getCollection("logos");
                 src={`/projects/software/${project.slug}.webp`}
                 alt={project.data.name}
               />
-              <div class="opacity-0 absolute bg-dark-400 rounded-lg top-0 h-full w-full flex justify-center items-center flex-col gap-4 hover:opacity-100 transition-all">
+              <div class="opacity-0 absolute p-2 bg-dark-400 rounded-lg top-0 h-full w-full flex justify-center items-center flex-col gap-4 hover:opacity-100 transition-all">
                 <p class="text-sm text-center">{project.body}</p>
                 <div class="flex flex-wrap gap-2 justify-center">
                   {project.data.tags.map((tag) => {
                     return (
-                      <span class="text-xs p-2 bg-dark-200 shadow-lg rounded-lg">
+                      <span class="text-xs p-2 bg-dark-200 shadow-lg rounded-lg hover:scale-105 transition-all cursor-default">
                         {tag}
                       </span>
                     );
                   })}
                 </div>
                 <a
-                  class="bg-blue p-2 rounded-lg shadow-lg hover:bg-orange text-dark-400"
+                  class="bg-blue p-2 rounded-lg shadow-lg hover:bg-orange text-dark-400 transition-all"
                   href={project.data.link}
                   target="_blank"
                 >
