@@ -15,7 +15,7 @@ const logos = await getCollection("logos");
             <div class="relative">
               <img
                 class="rounded-lg shadow-lg w-full"
-                src={`/projects/software/${project.slug}.webp`}
+                src={`public/projects/software/${project.slug}.webp`}
                 alt={project.data.name}
               />
               <div class="opacity-0 absolute p-2 bg-dark-400 rounded-lg top-0 h-full w-full flex justify-center items-center flex-col gap-4 hover:opacity-100 transition-all">
@@ -50,7 +50,7 @@ const logos = await getCollection("logos");
           return (
             <img
               class="rounded-lg shadow-lg w-full hover:scale-105 transition-all"
-              src={`/projects/logos/${logo.slug}.webp`}
+              src={`public/projects/logos/${logo.slug}.webp`}
               alt={logo.data.name}
             />
           );
