@@ -1,0 +1,60 @@
+---
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects");
+const logos = await getCollection("logos");
+---
+
+<article class="flex justify-center bg-dark-300 py-8 font-ibm text-light">
+  <div class="w-3/4 sm:w-1/2">
+    <h2 class="text-center text-3xl font-bold mb-4">Projects</h2>
+    <section class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {
+        projects.map((project) => {
+          return (
+            <div class="relative">
+              <img
+                class="rounded-lg shadow-lg w-full"
+                src={`/projects/software/${project.slug}.webp`}
+                alt={project.data.name}
+              />
+              <div class="opacity-0 absolute bg-dark-400 rounded-lg top-0 h-full w-full flex justify-center items-center flex-col gap-4 hover:opacity-100 transition-all">
+                <p class="text-sm text-center">{project.body}</p>
+                <div class="flex flex-wrap gap-2 justify-center">
+                  {project.data.tags.map((tag) => {
+                    return (
+                      <span class="text-xs p-2 bg-dark-200 shadow-lg rounded-lg">
+                        {tag}
+                      </span>
+                    );
+                  })}
+                </div>
+                <a
+                  class="bg-blue p-2 rounded-lg shadow-lg hover:bg-orange text-dark-400"
+                  href={project.data.link}
+                  target="_blank"
+                >
+                  Visit
+                </a>
+              </div>
+            </div>
+          );
+        })
+      }
+    </section>
+    <h3 class="font-bold text-2xl text-center my-4">Logos</h3>
+    <section class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {
+        logos.map((logo) => {
+          <div class="relative">
+            <img
+              class="rounded-lg shadow-lg w-full"
+              src={`/projects/logos/${logo.slug}.webp`}
+              alt={logo.data.name}
+            />
+          </div>;
+        })
+      }
+    </section>
+  </div>
+</article>
